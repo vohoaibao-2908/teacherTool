@@ -6,7 +6,7 @@ define('_DIR_ROOT', __DIR__);
 if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
   $base_url = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 } else {
-  $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/duan_1/';
+  $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/fpoly_manager/';
   // $base_url = 'http://' . $_SERVER['HTTP_HOST'] . '/';
 }
 
