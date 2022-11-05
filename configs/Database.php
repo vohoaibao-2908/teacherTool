@@ -4,10 +4,8 @@
 define('HOSTNAME', 'localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
-define('DATABASE', 'duan_1');
+define('DATABASE', 'fpoly_manager');
 define('PORT', '2003');
-
-
 
 
 
