@@ -1,33 +1,55 @@
-<!doctype html>
-<html lang="en" class="minimal-theme">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<?= BASE_URL('assets/images/favicon-32x32.png') ?>" type="image/png" />
-  <!--plugins-->
-  <link href="<?= BASE_URL('assets/plugins/simplebar/css/simplebar.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') ?>" rel="stylesheet" />
-  <!-- Bootstrap CSS -->
-  <link href="<?= BASE_URL('assets/css/bootstrap.min.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/bootstrap-extended.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/style.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/icons.css') ?>" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPOLY - TEACHER MANAGER</title>
+  <!-- <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" /> -->
 
-  <!-- loader-->
-  <link href="<?= BASE_URL('assets/css/pace.min.css') ?>" rel="stylesheet" />
 
-  <!--Theme Styles-->
-  <link href="<?= BASE_URL('assets/css/dark-theme.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/light-theme.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/semi-dark.css') ?>" rel="stylesheet" />
-  <link href="<?= BASE_URL('assets/css/header-colors.css') ?>" rel="stylesheet" />
+  <link href="<?= BASE_URL('assets/theme/vendors/vendors.bundle.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="<?= BASE_URL('assets/theme/css/style.bundle.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="<?= BASE_URL('assets/theme/css/skins/header/base/light.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="<?= BASE_URL('assets/theme/css/skins/header/menu/light.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="<?= BASE_URL('assets/theme/css/skins/brand/light.css') ?>" rel="stylesheet" type="text/css" />
+  <link href="<?= BASE_URL('assets/theme/css/skins/aside/light.css') ?>" rel="stylesheet" type="text/css" />
 
-  <title>FPOLY Manager</title>
+
+  <!-- <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" /> -->
+
+  <link href="<?= BASE_URL('assets/css/style.css') ?>" rel="stylesheet" type="text/css" />
+
+  <!-- <link href="https://ap.poly.edu.vn/css/popup.css" id="theme" rel="stylesheet" /> -->
+  <link rel="shortcut icon" href="<?= BASE_URL('assets/images/favicon.ico') ?>" />
+
+  <style>
+    #show-newsletter-student {
+      max-height: 60vh !important;
+      overflow: auto;
+      overflow-x: hidden;
+    }
+
+    #show-newsletter-student::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #f5f5f5;
+    }
+
+    #show-newsletter-student::-webkit-scrollbar {
+      width: 1px;
+      background-color: #f5f5f5;
+    }
+
+    #show-newsletter-student::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #ede6e6;
+    }
+  </style>
 </head>
 
-<body>
+<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right
+kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed
+kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">

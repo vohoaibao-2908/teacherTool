@@ -9,6 +9,12 @@ define('PORT', '2003');
 
 
 
+// define('HOSTNAME', 'localhost');
+// define('USERNAME', 'viewscom_fpoly_manager');
+// define('PASSWORD', 'fpoly_manager');
+// define('DATABASE', 'viewscom_fpoly_manager');
+// define('PORT', '3306');
+
 
 class Database
 {

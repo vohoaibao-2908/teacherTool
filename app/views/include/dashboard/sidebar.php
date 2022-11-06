@@ -1,272 +1,174 @@
-<aside class="sidebar-wrapper">
-  <div class="iconmenu">
-    <div class="nav-toggle-box">
-      <div class="nav-toggle-icon"><i class="bi bi-list"></i></div>
+<div id="kt_aside" class="kt-aside  kt-aside--fixed  kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop" style="opacity: 1;">
+  <div id="kt_aside_brand" class="kt-aside__brand kt-grid__item " style="" kt-hidden-height="65">
+    <div class="kt-aside__brand-logo">
+      <a href="<?= BASE_URL('') ?>">
+        <img alt="Logo" src="<?= BASE_URL('assets/images/logo.png') ?>" width="135">
+      </a>
     </div>
-    <ul class="nav nav-pills flex-column">
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboards">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-dashboards" type="button"><i class="bi bi-house-door-fill"></i></button>
-      </li>
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Quản lý">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-manager" type="button"><i class="bi bi-briefcase-fill"></i></button>
-      </li>
-
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Lớp học">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-classroom" type="button"><i class="bi bi-layers-fill"></i></button>
-      </li>
-
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Sinh viên">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-student" type="button"><i class="bi bi-layers-fill"></i></button>
-      </li>
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Tiện ích">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-extensions" type="button"><i class="bi bi-grid-fill"></i></button>
-      </li>
-
-      <li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" title="Liên kết">
-        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pills-links" type="button">
-          <i class="bi bi-share-fill"></i></button>
-      </li>
-    </ul>
+    <div class="kt-aside__brand-tools">
+      <button id="kt_aside_toggler" class="kt-aside__brand-aside-toggler">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <polygon points="0 0 24 0 24 24 0 24"></polygon>
+              <path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) "></path>
+              <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) "></path>
+            </g>
+          </svg></span> <span><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <polygon points="0 0 24 0 24 24 0 24"></polygon>
+              <path d="M12.2928955,6.70710318 C11.9023712,6.31657888 11.9023712,5.68341391 12.2928955,5.29288961 C12.6834198,4.90236532 13.3165848,4.90236532 13.7071091,5.29288961 L19.7071091,11.2928896 C20.085688,11.6714686 20.0989336,12.281055 19.7371564,12.675721 L14.2371564,18.675721 C13.863964,19.08284 13.2313966,19.1103429 12.8242777,18.7371505 C12.4171587,18.3639581 12.3896557,17.7313908 12.7628481,17.3242718 L17.6158645,12.0300721 L12.2928955,6.70710318 Z" fill="#000000" fill-rule="nonzero"></path>
+              <path d="M3.70710678,15.7071068 C3.31658249,16.0976311 2.68341751,16.0976311 2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 L8.29289322,8.29289322 C8.67147216,7.91431428 9.28105859,7.90106866 9.67572463,8.26284586 L15.6757246,13.7628459 C16.0828436,14.1360383 16.1103465,14.7686056 15.7371541,15.1757246 C15.3639617,15.5828436 14.7313944,15.6103465 14.3242754,15.2371541 L9.03007575,10.3841378 L3.70710678,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(9.000003, 11.999999) rotate(-270.000000) translate(-9.000003, -11.999999) "></path>
+            </g>
+          </svg></span></button>
+    </div>
   </div>
 
+  <div id="kt_aside_menu_wrapper" class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid">
+    <div id="kt_aside_menu" data-ktmenu-vertical="1" data-ktmenu-scroll="1" data-ktmenu-dropdown-timeout="500" class="kt-aside-menu kt-scroll ps" style="height: 655px; overflow: hidden;">
+      <ul class="kt-menu__nav ">
+        <?php
+        $menu_aside = [
+          [
+            'name' => 'Thông báo và tin tức',
+            'path' => '',
+            'icon' => 'fa fa-bell'
+          ],
 
-  <div class="textmenu">
-    <div class="brand-logo">
-      <img src="<?= BASE_URL('assets/images/brand-logo-2.png') ?>" width="140" alt="" />
-    </div>
-    <div class="tab-content">
-      <div class="tab-pane fade" id="pills-dashboards">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Dashboards</h5>
-            </div>
-            <small class="mb-0">FPOLY MANAGER</small>
-          </div>
-          <?php
 
-          $dashboard  = [
-
-            [
-              "name" => 'Quản lý',
-              "path" => 'quan-ly',
-              "icon" => 'bx bx-cast',
-            ],
-            [
-              "name" => 'Lớp học',
-              'icon' => 'bx bx-layer',
-              "path" => 'lop-hoc',
-            ],
-            [
-              "name" => 'Sinh viên',
-              'icon' => 'bx bx-user',
-              "path" => 'sinh-vien',
-            ],
-            [
-              "name" => 'Tiện ích',
-              "path" => 'tien-ich',
-              'icon' => 'bx bx-extension',
-            ], [
-              "name" => 'Liên kết',
-              "path" => 'lien-ket',
-              'icon' => 'bx bx-link',
-
+          [
+            'name' => 'Quản lý',
+            'path' => 'quan-ly',
+            'icon' => 'fa fa-list',
+            'sub' => [
+              [
+                'name' => 'Khóa học',
+                'path' => 'khoa-hoc',
+              ],
+              [
+                'name' => 'Học kỳ',
+                'path' => 'hoc-ky',
+              ],
+              [
+                'name' => 'Môn học',
+                'path' => 'mon-hoc',
+              ],
+              [
+                'name' => 'Loại lớp',
+                'path' => 'loai-lop',
+              ], [
+                'name' => 'Điểm',
+                'path' => 'diem',
+              ]
             ]
+          ],
+          [
+            'name' => 'Lớp học',
+            'path' => 'lop-hoc',
+            'icon' => 'fa fa-layer-group',
+            'sub' => [
+              [
+                'name' => 'Lớp đang dạy',
+                'path' => 'dang-day',
+              ],
+              [
+                'name' => 'Lớp đã dạy',
+                'path' => 'da-day',
+              ]
+            ]
+          ],
+
+          [
+            'name' => 'Sinh viên',
+            'path' => 'sinh-vien',
+            'icon' => 'fa fa-users',
+            'sub' => [
+              [
+                'name' => 'Sinh viên giỏi',
+                'path' => 'sinh-vien-gioi',
+              ],
+              [
+                'name' => 'Sinh viên yếu',
+                'path' => 'sinh-vien-yeu',
+              ]
+            ]
+          ], [
+            'name' => 'Tiện ích',
+            'path' => 'tien-ich',
+            'icon' => 'fa fa-bell',
+            'sub' => [
+              [
+                'name' => 'Thành ngữ',
+                'path' => 'thanh-ngu',
+              ],
+              [
+                'name' => 'Profile',
+                'path' => 'profile',
+              ]
+            ]
+          ], [
+            'name' => 'Liên kết',
+            'path' => 'lien-ket',
+            'icon' => 'fa fa-link',
           ]
 
-          ?>
-          <?php foreach ($dashboard as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-          <?php } ?>
 
-        </div>
+        ];
+
+        ?>
+
+        <?php
+        foreach ($menu_aside as $item) { ?>
+
+          <li aria-haspopup="true" <?= isset($item['sub']) ? 'data-ktmenu-submenu-toggle="hover"' : false ?> class="kt-menu__item    <?= isset($item['sub']) ? 'kt-menu__item--submenu' : false ?> ">
+            <a href="<?= !isset($item['sub']) ?  BASE_URL($item['path']) : 'javascript:;' ?>" class="kt-menu__link <?= isset($item['sub']) ? 'kt-menu__toggle' :  false ?>">
+              <span class="kt-menu__link-icon">
+                <i class="<?= $item['icon'] ?>" style="font-size: 18px;"></i>
+              </span>
+              <span class="kt-menu__link-text"><?= $item['name'] ?></i></span>
+              <?php
+              if (isset($item['sub'])) { ?>
+                <i class="kt-menu__ver-arrow la la-angle-right"></i>
+              <?php } ?>
+            </a>
+
+            <?php
+            if (isset($item['sub'])) { ?>
+              <div class="kt-menu__submenu ">
+                <span class="kt-menu__arrow"></span>
+                <ul class="kt-menu__subnav">
+                  <?php
+                  foreach ($item['sub'] as $i) { ?>
+                    <li aria-haspopup="true" class="kt-menu__item ">
+                      <a href="<?= BASE_URL($item['path'] . '/' . $i['path']) ?>" class="kt-menu__link ">
+                        <i class="kt-menu__link-bullet kt-menu__link-bullet--dot">
+                          <span></span>
+                        </i>
+                        <span class="kt-menu__link-text"><?= $i['name'] ?></span>
+                      </a>
+                    </li>
+                  <?php } ?>
+                </ul>
+              </div>
+            <?php } ?>
+          </li>
+
+
+        <?php } ?>
+
+        <li aria-haspopup="true" class="kt-menu__item ">
+          <a href="https://www.facebook.com/thaotoiday" class="kt-menu__link" target="_blank">
+            <span class="kt-menu__link-icon">
+              <img src="https://img.icons8.com/office/16/000000/help.png"></span>
+            <span class="kt-menu__link-text">Hỗ trợ</span></a>
+        </li>
+      </ul>
+      <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+        <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
       </div>
-
-      <div class="tab-pane fade" id="pills-manager">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Quản lý</h5>
-            </div>
-            <small class="mb-0">FPOLY MANAGER</small>
-          </div>
-
-          <?php
-
-          $manager = [
-            [
-              'name' => 'Khóa học',
-              'path' => 'quan-ly/khoa-hoc',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Học kỳ',
-              'path' => 'quan-ly/hoc-ky',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Môn học',
-              'path' => 'quan-ly/mon-hoc',
-              'icon' => 'bi bi-box',
-            ],
-
-            [
-              'name' => 'Loại lớp',
-              'path' => 'quan-ly/loai-lop',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Điểm của loại lớp',
-              'path' => 'quan-ly/diem',
-              'icon' => 'bi bi-box',
-            ],
-          ];
-          ?>
-
-          <?php
-          foreach ($manager as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-
-          <?php } ?>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="pills-classroom">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Lớp học</h5>
-            </div>
-            <small class="mb-0">FPOLY MANAGER</small>
-          </div>
-
-          <?php
-
-          $classroom = [
-            [
-              'name' => 'Lớp đang dạy',
-              'path' => 'lop-hoc/lop-dang-day',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Các lớp đã dạy',
-              'path' => 'lop-hoc/lop-da-day',
-              'icon' => 'bi bi-box',
-            ],
-          ];
-          ?>
-
-          <?php
-          foreach ($classroom as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-
-          <?php } ?>
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="pills-student">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Lớp học</h5>
-            </div>
-            <small class="mb-0">FPOLY MANAGER</small>
-          </div>
-
-          <?php
-
-          $student = [
-            [
-              'name' => 'Sinh viên giỏi',
-              'path' => 'sinh-vien/sinh-vien-gioi',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Sinh viên yếu',
-              'path' => 'sinh-vien/sinh-vien-yeu',
-              'icon' => 'bi bi-box',
-            ],
-          ];
-          ?>
-
-          <?php
-          foreach ($student as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-
-          <?php } ?>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="pills-extensions">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Tiện ích</h5>
-            </div>
-            <small class="mb-0">Một số tiện ích cho bạn</small>
-          </div>
-
-          <?php
-
-          $extensions = [
-            [
-              'name' => 'Thành ngữ',
-              'path' => 'tien-ich/thanh-ngu',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Profile',
-              'path' => 'tien-ich/profile',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Files tải xuống',
-              'path' => 'tien-ich/downloads',
-              'icon' => 'bi bi-download',
-            ],
-
-          ];
-          ?>
-
-          <?php
-          foreach ($extensions as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-          <?php } ?>
-
-        </div>
-      </div>
-
-      <div class="tab-pane fade" id="pills-links">
-        <div class="list-group list-group-flush">
-          <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-0">Liên kết</h5>
-            </div>
-            <small class="mb-0">Một số liên kết cho bạn</small>
-          </div>
-          <?php
-
-          $links = [
-            [
-              'name' => 'Giảng dạy',
-              'path' => 'lien-ket/giang-day',
-              'icon' => 'bi bi-box',
-            ],
-            [
-              'name' => 'Khác',
-              'path' => 'lien-ket/khac',
-              'icon' => 'bi bi-box',
-            ],
-
-          ];
-          ?>
-
-          <?php
-          foreach ($links as $item) { ?>
-            <a href="<?= BASE_URL($item['path']) ?>" class="list-group-item"><i class="<?= $item['icon'] ?>"></i><?= $item['name'] ?></a>
-          <?php } ?>
-
-        </div>
+      <div class="ps__rail-y" style="top: 0px; right: 3px;">
+        <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
       </div>
     </div>
   </div>
-</aside>
+</div>

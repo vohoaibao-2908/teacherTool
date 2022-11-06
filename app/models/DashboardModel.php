@@ -10,21 +10,4 @@ class DashboardModel extends Model
     {
         # code...
     }
-
-
-
-
-
-
-    // Quản lý
-
-    public function manager()
-    {
-        # code...
-    }
-
-    public function khoa_hoc()
-    {
-        # code...
-    }
 }

@@ -16,28 +16,21 @@ class Dashboard extends  Controller
   public function index()
   {
     # code...
-    header('location: quan-ly');
     $this->data['content'] = 'dashboard/index';
+    $this->data['page_title'] = 'Trang chủ';
     $this->render('layouts/dashboard', $this->data);
   }
-
-
-
-
-
-
 
   // Quản lý
-  public function quan_ly()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/manager/index';
-    $this->render('layouts/dashboard', $this->data);
-  }
+
   public function khoa_hoc()
   {
     # code...
     $this->data['content'] = 'dashboard/manager/khoa_hoc';
+    $this->data['parent'] = 'Quản lý';
+    $this->data['page_title'] = 'Khóa học';
+
+
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -46,6 +39,10 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/manager/hoc_ky';
+    $this->data['parent'] = 'Quản lý';
+
+    $this->data['page_title'] = 'Học kỳ';
+
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -53,6 +50,10 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/manager/mon_hoc';
+    $this->data['parent'] = 'Quản lý';
+
+    $this->data['page_title'] = 'Môn học';
+
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -60,6 +61,9 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/manager/loai_lop';
+    $this->data['parent'] = 'Quản lý';
+
+    $this->data['page_title'] = 'Loại lớp';
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -68,6 +72,9 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/manager/diem';
+    $this->data['parent'] = 'Quản lý';
+
+    $this->data['page_title'] = 'Điểm';
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -77,17 +84,14 @@ class Dashboard extends  Controller
 
 
   // Tiện ích
-  public function tien_ich()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/extensions/index';
-    $this->render('layouts/dashboard', $this->data);
-  }
 
   public function thanh_ngu()
   {
     # code...
     $this->data['content'] = 'dashboard/extensions/thanh_ngu';
+    $this->data['parent'] = 'Tiện ích';
+
+    $this->data['page_title'] = 'Thành ngữ';
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -95,32 +99,26 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/extensions/profile';
+    $this->data['parent'] = 'Tiện ích';
+
+    $this->data['page_title'] = 'Profile';
     $this->render('layouts/dashboard', $this->data);
   }
 
 
-  public function downloads()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/extensions/downloads';
-    $this->render('layouts/dashboard', $this->data);
-  }
 
 
   // Lớp học
 
-  public function lop_hoc()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/classroom/index';
-    $this->render('layouts/dashboard', $this->data);
-  }
 
 
   public function lop_dang_day()
   {
     # code...
     $this->data['content'] = 'dashboard/classroom/lop-dang-day';
+    $this->data['parent'] = 'Lớp học';
+
+    $this->data['page_title'] = 'Lớp đang dạy';
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -129,6 +127,9 @@ class Dashboard extends  Controller
   {
     # code...
     $this->data['content'] = 'dashboard/classroom/lop-da-day';
+    $this->data['parent'] = 'Lớp học';
+
+    $this->data['page_title'] = 'Lớp đã dạy';
     $this->render('layouts/dashboard', $this->data);
   }
 
@@ -136,31 +137,25 @@ class Dashboard extends  Controller
 
   // Sinh viên
 
-
-  public function sinh_vien()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/student/index';
-    $this->render('layouts/dashboard', $this->data);
-  }
-
-
   public function sv_gioi()
   {
     # code...
-    $this->data['content'] = 'dashboard/student/sv_gioi';
+    $this->data['content'] = 'dashboard/sinhvien/sv_gioi';
+    $this->data['parent'] = 'Sinh viên';
+
+    $this->data['page_title'] = 'Sinh viên giỏi';
     $this->render('layouts/dashboard', $this->data);
   }
 
   public function sv_yeu()
   {
     # code...
-    $this->data['content'] = 'dashboard/student/sv_yeu';
+    $this->data['content'] = 'dashboard/sinhvien/sv_yeu';
+    $this->data['parent'] = 'Sinh viên';
+
+    $this->data['page_title'] = 'Sinh viên yếu';
     $this->render('layouts/dashboard', $this->data);
   }
-
-
-
 
 
   // Liên kết
@@ -168,30 +163,12 @@ class Dashboard extends  Controller
   public function links()
   {
     # code...
-    $this->data['content'] = 'dashboard/links/index';
+    $this->data['content'] = 'dashboard/links';
+    $this->data['page_title'] = 'Liên kết';
     $this->render('layouts/dashboard', $this->data);
   }
-
-  public function links_giang_day()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/links/giang_day';
-    $this->render('layouts/dashboard', $this->data);
-  }
-
-  public function links_other()
-  {
-    # code...
-    $this->data['content'] = 'dashboard/links/other';
-    $this->render('layouts/dashboard', $this->data);
-  }
-
-
 
   // Other
-
-
-
 
   public function logout()
   {
