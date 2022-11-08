@@ -20,20 +20,27 @@
 </script>
 
 
+
 <script src="<?= BASE_URL('assets/theme/vendors/vendors.bundle.js') ?>" type="text/javascript"></script>
 <script src="<?= BASE_URL('assets/theme/js/scripts.bundle.js') ?>" type="text/javascript"></script>
 
+<?php
+if ($target == "dashboard") { ?>
+  <script src="<?= BASE_URL('assets/theme/vendors/datatables.bundle.js"') ?>" type="text/javascript"></script>
+  <script src="<?= BASE_URL('assets/js/script.js"') ?>" type="text/javascript"></script>
 
-<script src="<?= BASE_URL('assets/theme/vendors/datatables.bundle.js"') ?>" type="text/javascript"></script>
+  <script>
+    $('.otp-term-modal').click();
+    $('.is-valid-phone-all-modal').click();
+    $('.show-noti-student').click();
+  </script>
 
-<script src="<?= BASE_URL('assets/js/script.js"') ?>" type="text/javascript"></script>
+<?php } elseif ($target == "auth") { ?>
+  <link href="<?= BASE_URL('assets/theme/js/auth.js') ?>" rel="stylesheet" type="text/css" />
+<?php } ?>
 
 
-<script>
-  $('.otp-term-modal').click();
-  $('.is-valid-phone-all-modal').click();
-  $('.show-noti-student').click();
-</script>
+
 
 </body>
 

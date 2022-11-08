@@ -4,6 +4,11 @@ $routes[''] = 'dashboard';
 $routes['default_controller'] = 'dashboard';
 
 
+//Auth
+$routes['login'] = 'auth/login';
+$routes['register'] = 'auth/register';
+
+
 // Quản lý
 $routes['quan-ly/khoa-hoc'] = 'dashboard/khoa_hoc';
 $routes['quan-ly/hoc-ky'] = 'dashboard/hoc_ky';

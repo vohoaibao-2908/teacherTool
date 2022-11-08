@@ -11,6 +11,15 @@ class Dashboard extends  Controller
   public function __construct()
   {
     # code...
+
+    if (isset($_SESSION['username']) || isset($_SESSION['email']) && !empty($_SESSION['username']) || !empty($_SESSION['email'])) {
+    } else {
+      // header('Location: ' . BASE_URL('login'));
+    }
+
+    $this->model_home = $this->model('DashboardModel');
+    $this->data['target'] = 'dashboard';
+    $this->data = array_merge($this->data, $this->model_home->data);
   }
 
   public function index()

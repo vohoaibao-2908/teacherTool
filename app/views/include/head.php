@@ -5,24 +5,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FPOLY - TEACHER MANAGER</title>
+  <title><?= $page_title ?> | Fpoly</title>
   <!-- <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" /> -->
-
-
+  <link rel="shortcut icon" href="<?= BASE_URL('assets/images/favicon.ico') ?>" />
   <link href="<?= BASE_URL('assets/theme/vendors/vendors.bundle.css') ?>" rel="stylesheet" type="text/css" />
   <link href="<?= BASE_URL('assets/theme/css/style.bundle.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?= BASE_URL('assets/theme/css/skins/header/base/light.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?= BASE_URL('assets/theme/css/skins/header/menu/light.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?= BASE_URL('assets/theme/css/skins/brand/light.css') ?>" rel="stylesheet" type="text/css" />
-  <link href="<?= BASE_URL('assets/theme/css/skins/aside/light.css') ?>" rel="stylesheet" type="text/css" />
+
+  <?php
+  if ($target == "dashboard") { ?>
+    <link href="<?= BASE_URL('assets/theme/css/skins/header/base/light.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= BASE_URL('assets/theme/css/skins/header/menu/light.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= BASE_URL('assets/theme/css/skins/brand/light.css') ?>" rel="stylesheet" type="text/css" />
+    <link href="<?= BASE_URL('assets/theme/css/skins/aside/light.css') ?>" rel="stylesheet" type="text/css" />
+
+  <?php } elseif ($target == "auth") { ?>
+    <link href="<?= BASE_URL('assets/theme/css/auth.css') ?>" rel="stylesheet" type="text/css" />
+  <?php } ?>
+
+  <link href="<?= BASE_URL('assets/css/style.css') ?>" rel="stylesheet" type="text/css" />
 
 
   <!-- <link href="https://ap.poly.edu.vn/theme/student_v2/vendors/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" /> -->
 
-  <link href="<?= BASE_URL('assets/css/style.css') ?>" rel="stylesheet" type="text/css" />
-
   <!-- <link href="https://ap.poly.edu.vn/css/popup.css" id="theme" rel="stylesheet" /> -->
-  <link rel="shortcut icon" href="<?= BASE_URL('assets/images/favicon.ico') ?>" />
+
 
   <style>
     #show-newsletter-student {
