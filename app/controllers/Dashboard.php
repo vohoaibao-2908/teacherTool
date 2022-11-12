@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends  Controller
+class Dashboard extends Controller
 {
 
   public $data = array();
@@ -124,7 +124,7 @@ class Dashboard extends  Controller
   public function lop_dang_day()
   {
     # code...
-    $this->data['content'] = 'dashboard/classroom/lop-dang-day';
+    $this->data['content'] = 'dashboard/classroom/lop_dang_day';
     $this->data['parent'] = 'Lớp học';
 
     $this->data['page_title'] = 'Lớp đang dạy';
@@ -135,7 +135,7 @@ class Dashboard extends  Controller
   public function lop_da_day()
   {
     # code...
-    $this->data['content'] = 'dashboard/classroom/lop-da-day';
+    $this->data['content'] = 'dashboard/classroom/lop_da_day';
     $this->data['parent'] = 'Lớp học';
 
     $this->data['page_title'] = 'Lớp đã dạy';

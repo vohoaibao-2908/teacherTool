@@ -1,0 +1,66 @@
+table,
+th,
+td {
+    border-bottom: 1px solid #ccc;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 6px;
+    margin-right: 6px;
+    color: var(--color-base-0);
+}
+
+table thead {
+    background-color: #ccc;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+}
+
+table tr .tieude {
+    color: #D3D3D3;
+}
+
+.pd-2 {
+    padding: var(--mb-0-75) 0;
+}
+
+/* css clasmember */
+.kt-font-boldest ul {
+    padding: 0;
+}
+
+.kt-font-boldest ul li a {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    box-shadow: 0 1px white;
+}
+
+.kt-font-boldest ul li:hover a {
+    color: red;
+}
+
+.kt-font-boldest ul li:hover {
+    box-shadow: 0 1px red;
+}
+
+.kt-font-boldest ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 18px;
+}

@@ -20,7 +20,15 @@
 
   <?php } elseif ($target == "auth") { ?>
     <link href="<?= BASE_URL('assets/theme/css/auth.css') ?>" rel="stylesheet" type="text/css" />
-  <?php } ?>
+  <?php };
+  $array = explode("/", $content);
+  $cssFile = $array[count($array) - 1];
+  if (file_exists("assets/css/" . $cssFile . ".css")) {
+  ?>
+    <link rel="stylesheet" href="<?= BASE_URL('assets/css/' . $cssFile . '.css') ?>">
+  <?php
+  }
+  ?>
 
   <link href="<?= BASE_URL('assets/css/style.css') ?>" rel="stylesheet" type="text/css" />
 

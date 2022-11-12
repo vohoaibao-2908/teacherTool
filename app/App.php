@@ -12,11 +12,10 @@ class App
         global $routes;
 
         $this->__routes = new Route();
-
         if (!empty($routes['default_controller'])) {
             $this->__controller = $routes['default_controller'];
         }
-
+        
         $this->__action = 'index';
         $this->__param = [];
 
@@ -47,7 +46,6 @@ class App
 
         $urlArray = array_filter(explode('/', $url));
         $urlArray  = array_values($urlArray);
-
 
         $urlCheck = '';
 
@@ -83,6 +81,7 @@ class App
         }
 
         if (file_exists('app/controllers/' .  $urlCheck . '.php')) {
+    
             require_once 'app/controllers/' . $urlCheck . '.php';
             // check exist class controller
             if (class_exists($this->__controller)) {

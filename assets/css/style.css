@@ -1,12 +1,54 @@
+:root {
+  /* --body-font: 'Poppins', sans-serif;; */
+  /* 1rem = 16px */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+
+  /* =============Font weight ========== */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-extra-bold: 800;
+
+  /* ========Margenes Bottom========= */
+  /* .25rem = 4px , .5rem = 8px , .75rem = 12px */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-3-5: 3.5rem;
+
+  /* ======== z index =========== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+
+  /* ======== color base ======= */
+  --color-base-0: #333;
+
+}
+
 @media screen and (max-width: 1170px) {
   .navbar-header {
     visibility: hidden;
     width: 0 !important;
   }
 }
+
 .dark-logo {
   height: 70px;
 }
+
 body,
 .subheader,
 .card-title,
@@ -16,26 +58,32 @@ body,
   font-family: roboto, sans-serif !important;
   font-weight: 400 !important;
 }
+
 th {
   font-weight: 700 !important;
 }
+
 .profile-img-2 img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
+
 .search-listing li a {
   color: #0275d8;
 }
+
 .search-listing li p {
   font-size: 14px;
   font-style: italic;
 }
+
 .search-listing li {
   padding-bottom: 0;
 }
+
 @media (min-width: 768px) {
-  .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
+  .mini-sidebar .sidebar-nav #sidebarnav>li>ul {
     position: absolute;
     left: 60px;
     top: 51.42px;
@@ -46,153 +94,194 @@ th {
     padding-left: 1px;
   }
 }
+
 .uppercase {
   text-transform: uppercase;
 }
+
 .posted_by {
   font-size: 14px;
   font-style: italic;
 }
+
 .green {
   color: green;
 }
+
 .red {
   color: red;
 }
+
 .blue {
   color: #00f;
 }
+
 .orange {
   color: orange;
 }
+
 .dt-buttons {
   margin-bottom: 5px;
 }
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 400px;
     margin: 1.75rem auto;
   }
 }
+
 .error {
   color: red;
   margin-top: 3px;
 }
+
 .form-group {
   margin-bottom: 0.5rem;
 }
+
 label {
   margin-bottom: 0;
 }
+
 #btn_login {
   margin-top: 10px;
 }
+
 #footer {
   background: #192041;
   color: #fff;
   border-top: 10px solid #f7941d;
   font-size: 13px;
 }
-footer > div > div:nth-child(2) h6 {
+
+footer>div>div:nth-child(2) h6 {
   text-decoration: underline;
   color: #f7941d;
 }
+
 footer {
   margin: 10px auto 0;
 }
+
 .navbar {
   margin-bottom: 150px;
 }
+
 .home-nav {
   text-transform: uppercase;
   font-weight: 700;
 }
+
 .column {
   float: left;
   width: 50%;
 }
+
 .poly-logo {
   width: 35%;
   padding: 30px 0;
 }
+
 #poly-logo {
   width: 200px;
 }
+
 .row:after {
   content: "";
   display: table;
   clear: both;
   margin: 0 auto;
 }
+
 .address {
   font-size: 12px;
 }
+
 .footer-filter-by-campus {
   width: 100%;
 }
+
 .campus-contact-information {
   border-left: 1px solid;
   padding-left: 20px;
 }
+
 .campus-contact-information h3 {
   font-weight: 700;
   padding-left: 15px;
 }
+
 .campus-contact-content {
   font-size: 12px;
   text-align: left;
   padding-left: 15px;
 }
+
 .title {
   font-weight: 700;
 }
+
 .break-line::before {
   content: "\a";
   white-space: pre;
 }
+
 .contact-title {
   font-size: 16px;
 }
+
 #kt_footer {
   bottom: 0;
   border-top: 1px solid #c4cff9;
 }
+
 .kt-widget1__title {
   margin-top: 5px;
 }
+
 .footer-filter-by-campus-mobile {
   display: none;
 }
+
 @media only screen and (max-width: 600px) {
   #poly-logo {
     width: 150px;
   }
+
   .footer-filter-by-campus {
     display: none;
   }
+
   .footer-filter-by-campus-mobile {
     display: block;
     opacity: 1;
   }
+
   .address {
     font-size: 10px;
   }
+
   .brand-logo {
     text-align: center;
     margin-bottom: 10px;
   }
+
   .campus-contact-content {
     font-size: 10px;
     text-align: left;
     padding: 0;
   }
+
   #kt_footer {
     position: relative;
   }
+
   ul {
     margin-bottom: 0;
   }
 }
+
 .phone-number-input {
   min-height: 50px !important;
 }
